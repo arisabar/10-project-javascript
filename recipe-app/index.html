@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
-    <script src="./script.js" defer></script>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <div class="mobile-container">
-        <header>
-            <input type="text">
-            <button id="search">Search</button>
-        </header>
-        <div class="fav-container">
-            <h3>Favorite Meals</h3>
-            <ul>
-                <li><img src="https://www.themealdb.com/images/media/meals/lwsnkl1604181187.jpg" alt="tonkatsu-pork"><span>Tonkatsu Pork</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/1529444113.jpg" alt="tso-chicken"><span>Tso's Chicken</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/1525872624.jpg" alt="kung-pao"><span>Kung Pao</span></li>
-            </ul>
-        </div>
-        <div class="meals">
-            <div class="meal">
-                <div class="meal-header">
-                    <img src="" alt="">
-                </div>
-                <div class="meal-body">
-                    <h4>Chicken</h4>
-                    <button>
-                        <i class="far fa-heart"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+      <header>
+        <input type="text" id="search-term" />
+        <button id="search"><i class="fas fa-search"></i></button>
+      </header>
+      <div class="fav-container">
+        <h3>Favorite Meals</h3>
+        <ul class="fav-meals" id="fav-meals"></ul>
+      </div>
+      <div class="meals" id="meals"></div>
     </div>
-</body>
 
+    <div class="popup-container hidden" id="meal-popup">
+      <div class="popup">
+        <button id="close-popup" class="close-popup">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="meal-info" id="meal-info"></div>
+      </div>
+    </div>
+  </body>
 </html>
